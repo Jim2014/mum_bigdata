@@ -15,7 +15,7 @@
   * Include inner class Mapper
   * Include inner class Reducer
   * Other inner class needed
-  * Each java class file include a Main method, you can run the Main method and see the rusult.
+  * Each java class file include a Main method, you can run the Main method and see the result.
   
 ## Java class files
 1. CrystalBallPair.java
