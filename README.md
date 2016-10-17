@@ -16,6 +16,7 @@
   * Include inner class Reducer
   * Other inner class needed
   * Each java class file include a Main method, you can run the Main method and see the rusult.
+  
 ## Java class file describle
 1. CrystalBallPair.java
   * This is for Part2
