@@ -17,7 +17,7 @@
   * Other inner class needed
   * Each java class file include a Main method, you can run the Main method and see the rusult.
   
-## Java class file describle
+## Java class files
 1. CrystalBallPair.java
   * This is for Part2
   * Implement pairs algorithm to compute relative frequencies
@@ -27,7 +27,8 @@
 3. CrystalBallPairStripe.java
   * This is for Part4
   * Implement pairs in mapper and stripes in reducer to compute relative frequencies (hybrid approach)
-## Input file input.txt 
+
+## Input file - input.txt 
   ```
   Mary 34 56 29 12 34 56 92 29 34 12
   Kelly 92 29 12 34 79 29 56 12 34 18
