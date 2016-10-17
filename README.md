@@ -16,5 +16,15 @@
   * Include inner class Reducer
   * Other inner class needed
   * Each java class file include a Main method, you can run the Main method and see the rusult.
+## Java class file describle
+1. CrystalBallPair.java
+  * This is for Part2
+  * Implement pairs algorithm to compute relative frequencies
+1. CrystalBallStripe.java
+  * This is for Part3
+  * Implement stripes algorithm to compute relative frequencies
+1. CrystalBallPairStripe.java
+  * This is for Part4
+  * Implement pairs in mapper and stripes in reducer to compute relative frequencies (hybrid approach)
     
    
