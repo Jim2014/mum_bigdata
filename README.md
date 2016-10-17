@@ -1,4 +1,4 @@
-# Bigdata Course Project
+# Bigdata Course Project - Crystal Ball
 *This project is for course project of MUM BigData*
 ## How to run this project?
 1. Download the [Cloudra QuickStart VM(for CDH5.8)](http://www.cloudera.com/downloads/quickstart_vms/5-8.html)
