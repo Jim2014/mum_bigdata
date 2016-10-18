@@ -2,7 +2,8 @@ hadoop fs -mkdir /user/cloudera/Input
 hadoop fs -put /home/cloudera/workspace/CrystalBall/Input/input.txt  /user/cloudera/Input/
 hadoop fs -ls /user/cloudera/Input
 
-hadoop jar /home/cloudera/workspace/CrystalBall/bin/CrystalBall.jar CrystalBallPair
-hadoop fs -rm /user/cloudera/Output1/*
+hadoop fs -rm /user//Output1/*
 hadoop fs -rmdir /user/cloudera/Output1
+hadoop jar /home/cloudera/workspace/CrystalBall/bin/CrystalBall.jar CrystalBallPair
 hadoop fs -ls /user/cloudera/Output1
+hadoop fs -get /user/cloudera/Output1/part-r-00000 /home/cloudera/workspace/CrystalBall/Hadoop/Output1/result1
