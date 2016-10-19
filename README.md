@@ -16,6 +16,10 @@
   * Include inner class Reducer
   * Other inner class needed
   * Each java class file include a Main method, you can run the Main method and see the result.
+6. Run the project by Bash scripts in VM
+  * Export Jar file from Eclipse
+  * Refference the Bash script files(RunCrystalBallPair,RunCrystalBallStripe,RunCrystalBallHybird)
+  * Modify the path of script files if you run them in your VM
   
 ## Java class files
 1. CrystalBallPair.java
