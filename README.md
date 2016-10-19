@@ -24,7 +24,7 @@
 2. CrystalBallStripe.java
   * This is for Part3
   * Implement stripes algorithm to compute relative frequencies
-3. CrystalBallPairStripe.java
+3. CrystalBallHybird.java
   * This is for Part4
   * Implement pairs in mapper and stripes in reducer to compute relative frequencies (hybrid approach)
 
@@ -33,5 +33,6 @@
   Mary 34 56 29 12 34 56 92 29 34 12
   Kelly 92 29 12 34 79 29 56 12 34 18
   ```
+  
     
    
