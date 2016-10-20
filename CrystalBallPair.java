@@ -1,4 +1,3 @@
-
 import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
@@ -15,16 +14,14 @@ import org.apache.hadoop.io.DoubleWritable;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
-import org.apache.hadoop.io.TwoDArrayWritable;
 import org.apache.hadoop.io.WritableComparable;
-import org.apache.hadoop.mapred.join.TupleWritable;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Partitioner;
 import org.apache.hadoop.mapreduce.Reducer;
-import org.apache.hadoop.mapreduce.Reducer.Context;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
-import org.apache.hadoop.mapreduce.lib.input.FileSplit;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+
 
 import com.google.common.collect.ComparisonChain;
 
@@ -172,9 +169,20 @@ public class CrystalBallPair {
 
 	}
 
+	public static class MyPartitioner extends Partitioner<PairWritable, IntWritable>{
+	
+		@Override
+		public int getPartition(PairWritable key, IntWritable value, int numReducer) {
+			
+			return (key.getKey().hashCode()&Integer.MAX_VALUE)%numReducer;
+		
+		}
+		
+	}
+
 	public static void main(String[] args) throws Exception {
 		Configuration conf = new Configuration();
-		Job job = Job.getInstance(conf, "Inverted Index");
+		Job job = Job.getInstance(conf, "CrystalBallPair");
 
 		job.setJarByClass(CrystalBallPair.class);
 
@@ -185,6 +193,8 @@ public class CrystalBallPair {
 		job.setMapperClass(MyMapper.class);
 		// job.setCombinerClass(MyReducer.class);
 		job.setReducerClass(MyReducer.class);
+		job.setNumReduceTasks(1);
+		job.setPartitionerClass(MyPartitioner.class);
 		// map output types
 		job.setMapOutputKeyClass(PairWritable.class);
 		job.setMapOutputValueClass(IntWritable.class);
